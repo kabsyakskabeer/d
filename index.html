@@ -246,7 +246,6 @@ body{
   border-radius: 10px;
   
 }
-.
     </style>
 
 </head>
@@ -277,8 +276,39 @@ body{
           <% }); %>
         </ul>
      </div> */
+  
 
     </section>
 
+
   </body>
+  <script>
+       function jsonLoader(){
+            let theString ="";
+            let druglist = "";
+            let sList = "";
+            fetch('drug-offline.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("HTTP error " + response.status);
+                    }
+                    
+                    return response.text();
+                })
+                .then(prices => {
+                   myDrugs = JSON.parse(prices);
+                  
+                  
+                   for (let index = 0; index < myDrugs.length; index++) {
+                        const element = myDrugs[index];
+                        theString += `<li id=${(element.name).replace(/\s/g, '')}> <span id="drug-name">${element.name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.price}</span> </li>`;
+                        druglist += `<option value="${element.name}">`;   
+                    }
+                   
+                   
+                document.getElementById("main").innerHTML = `<ol> ${theString} </ol>`;  
+                document.getElementById("drugList").innerHTML = druglist;    
+            });
+        }
+  </script>
 </html>
