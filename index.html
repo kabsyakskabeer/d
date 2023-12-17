@@ -291,7 +291,7 @@ body{
             
                   for (let index = 0; index < myDrugs.length; index++) {
                        const element = myDrugs[index];
-                       theString += `<li>${element.brand_name}</li>`;
+                       theString += `<li>${element.brand_name}(${element.chemical_name}) manufactured by ${element.company_name} with a batch no.${element.batch_number} will expire on ${element.expiry_date}</li>`;
                         
                    }
                   
