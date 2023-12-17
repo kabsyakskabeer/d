@@ -264,7 +264,7 @@ body{
         <li> <a href="#">Feedback</a></li>
       </ul>
     </nav>
-    <section>
+    <section class="main">
      <div class="list-header"> expire in lessthan 30days</div>
 
     </section>
@@ -287,8 +287,6 @@ body{
                })
                .then(prices => {
                   myDrugs = JSON.parse(prices);
-
-                 
             
                   for (let index = 0; index < myDrugs.length; index++) {
                        const element = myDrugs[index];
@@ -297,7 +295,7 @@ body{
                    }
                   
               
-               document.getElementById("main").innerHTML = `<ol> ${theString} </ol>`;  
+               document.getElementById(".main").innerHTML = `<ol> ${theString} </ol>`;  
               //  document.getElementById("drugList").innerHTML = druglist;    
            });
        }
