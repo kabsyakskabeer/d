@@ -266,8 +266,6 @@ body{
     </nav>
     <section>
      <div class="list-header"> expire in 10 days</div>
-     
-      kabeer
 
     </section>
     <script>
@@ -294,7 +292,7 @@ window.onload = function(){
             
                   for (let index = 0; index < myDrugs.length; index++) {
                        const element = myDrugs[index];
-                       theString += `<li id=${(element.chemical_name).replace(/\s/g, '')}> <span id="drug-name">${element.name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.price}</span> </li>`;
+                       theString += `<li>${element.brand_name}</li>`;
                         
                    }
                   
