@@ -266,9 +266,9 @@ body{
     </nav>
     <section class="main">
      <div class="list-header"> expire in lessthan 30days</div>
-     <div id="main">
+     <ul id="main">
 
-     </div>
+     </ul>
 
     </section>
     <script>
@@ -278,8 +278,6 @@ body{
         }
       function jsonLoader(){
            let theString ="";
-           let druglist = "";
-           let sList = "";
            fetch('drug.json')
                .then(response => {
                    if (!response.ok) {
@@ -298,7 +296,7 @@ body{
                    }
                   
               
-               document.getElementById("main").innerHTML = `<ul> ${theString} </ul>`;  
+               document.getElementById("main").innerHTML = `${theString}`;  
               //  document.getElementById("drugList").innerHTML = druglist;    
            });
        }
