@@ -275,7 +275,7 @@ body{
            let theString ="";
            let druglist = "";
            let sList = "";
-           fetch('drug-offline.json')
+           fetch('drug.json')
                .then(response => {
                    if (!response.ok) {
                        throw new Error("HTTP error " + response.status);
