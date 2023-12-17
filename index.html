@@ -264,20 +264,7 @@ body{
         <li> <a href="#">Feedback</a></li>
       </ul>
     </nav>
-    <section>
-      /* <div class="list-header"> expire in 10 days</div>
-     <div class="list-container">
-        <ul>
-          <% characters.forEach(function(character) { %>
-            <li class="ui segment">
-              <%= character.name %> 
-              <!-- is <%= character.designation %> at hogwarts. -->
-            </li>
-          <% }); %>
-        </ul>
-     </div> */
-  
-
+    <section class="main>
     </section>
 
 
@@ -287,7 +274,7 @@ body{
             let theString ="";
             let druglist = "";
             let sList = "";
-            fetch('drug-offline.json')
+            fetch('drug.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error("HTTP error " + response.status);
@@ -297,17 +284,17 @@ body{
                 })
                 .then(prices => {
                    myDrugs = JSON.parse(prices);
+                  console.log(myDrugs);
                   
-                  
-                   for (let index = 0; index < myDrugs.length; index++) {
+                   <!-- for (let index = 0; index < myDrugs.length; index++) {
                         const element = myDrugs[index];
                         theString += `<li id=${(element.name).replace(/\s/g, '')}> <span id="drug-name">${element.name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.price}</span> </li>`;
                         druglist += `<option value="${element.name}">`;   
-                    }
+                    } -->
                    
                    
-                document.getElementById("main").innerHTML = `<ol> ${theString} </ol>`;  
-                document.getElementById("drugList").innerHTML = druglist;    
+                <!-- document.getElementById("main").innerHTML = `<ol> ${theString} </ol>`;  
+                document.getElementById("drugList").innerHTML = druglist;     -->
             });
         }
   </script>
