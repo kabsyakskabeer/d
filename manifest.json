@@ -1,0 +1,17 @@
+{
+    "short_name": "eAlart",
+    "name": "Expiry Alart",
+    "description": "get notified before drug expire",
+    "start_url": "/index.html",
+    "scope": "/",
+    "display": "fullscreen",
+    "icons": [
+    {
+    "src": "/medicine.png",
+    "type": "image/png",
+    "sizes": "192x192"
+    }
+   
+    ],
+    "theme_color": "#242424","background_color": "#242424"
+    }
