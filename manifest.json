@@ -2,8 +2,8 @@
     "short_name": "eAlart",
     "name": "Expiry Alart",
     "description": "get notified before drug expire",
-    "start_url": "/index.html",
-    "scope": "/",
+    "start_url": "/d/index.html",
+    "scope": "/d",
     "display": "fullscreen",
     "icons": [
     {
