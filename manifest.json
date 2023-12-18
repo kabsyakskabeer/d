@@ -3,7 +3,7 @@
     "name": "Expiry Alart",
     "description": "get notified before drug expire",
     "start_url": "/d/index.html",
-    "scope": "/d",
+    "scope": "/d/",
     "display": "fullscreen",
     "icons": [
     {
