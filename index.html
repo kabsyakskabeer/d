@@ -20,7 +20,7 @@
     font-family: montserrat;
   }
   nav{
-    background: #22a2ac;
+    background: #0276FF;
     /* #0082e6; */
     height: 80px;
     width: 100%;
@@ -49,7 +49,7 @@
     text-transform: uppercase;
   }
   a.active,a:hover{
-    background: #1b9bff;
+    background: #0276FF;
     transition: .5s;
   }
   .checkbtn{
@@ -97,7 +97,7 @@
     }
     a:hover,a.active{
       background: none;
-      color: #0082e6;
+      color:#0276FF; 
     }
     #check:checked ~ .my-ul{
       left: 0;
@@ -195,7 +195,7 @@ body{
    
     color: white;
     margin: auto;
-    background-color:  #22a2ac;
+    background-color: #0276FF;
     /* background: url("1.png"); */
     background-repeat: no-repeat;
     /* background-size: cover; */
@@ -220,7 +220,7 @@ body{
 .list-container ul{
   columns: 25rem;  
   column-gap: 7rem;  
-  column-rule: 4px dotted #22a2ac;  
+  column-rule: 4px dotted #0276FF; 
 }
             
 .list-container ul li {
@@ -238,7 +238,7 @@ body{
 }
     
 .list-header{
-  background-color:  #22a2ac;
+  background-color:  #0276FF;
   display: flex;
   justify-content: center;
   margin: 20px 0 0 0;
@@ -302,7 +302,8 @@ body{
                document.getElementById("main").innerHTML = `${theString}`;   
            });
        }
-       const registerServiceWorker = async () => {
+
+const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator) {
     try {
       const registration = await navigator.serviceWorker.register(
